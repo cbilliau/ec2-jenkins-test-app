@@ -11,11 +11,11 @@ pipeline {
     npm_config_cache = 'npm-cache'
   }
   stages {
-    stage('Install ng cli') {
-      steps {
-        sh ' npm install -g @angular/cli'
-      }
-    }
+    // stage('Install ng cli') {
+    //   steps {
+    //     sh ' npm install -g @angular/cli'
+    //   }
+    // }
     stage('Install Packages') {
       steps {
         sh ' npm install'
