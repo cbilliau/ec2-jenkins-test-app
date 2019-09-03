@@ -13,24 +13,24 @@ pipeline {
   stages {
     stage('Install ng cli') {
       steps {
-        sh 'npm install -g @angular/cli'
+        sh 'sudo npm install -g @angular/cli'
       }
     }
     stage('Install Packages') {
       steps {
-        sh 'npm install'
+        sh 'sudo npm install'
       }
     }
     stage('Test and Build') {
       parallel {
         stage('Run Tests') {
           steps {
-            sh 'npm run test'
+            sh 'sudo npm run test'
           }
         }
         stage('Create Build Artifacts') {
           steps {
-            sh 'npm run build'
+            sh 'sudo npm run build'
           }
         }
       }
